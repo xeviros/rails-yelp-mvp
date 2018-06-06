@@ -1,4 +1,15 @@
+
+<div class="container">
 <h1>Restaurant</h1>
 
 
-<% @restaurant %>
+<p> <%= @restaurant[:name] %> </p>
+<p> <%= @restaurant[:address] %> </p>
+<p> <%= @restaurant[:category] %> </p>
+<% @restaurant.reviews.each do |review| %>
+<p> <%= review[:content] %> </p>
+<p> <%= review[:rating] %> </p>
+<% end %>
+
+
+</div>
